@@ -45,10 +45,6 @@ public:
         return *std::min_element(_array, _array + _count);
     };
 
-    size_t Count() const {
-        return _count;
-    }
-
     ~ArrayHandler() {
         delete[] _array;
     };
