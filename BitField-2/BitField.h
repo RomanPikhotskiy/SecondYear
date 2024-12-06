@@ -1,6 +1,17 @@
 #pragma once
 #include <iostream>
+#include <unordered_set>
+#include <vector>
 #include <stdint.h>
+#include <unordered_map>
+#include <algorithm>
+#include <cstdlib>
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string>
+using namespace std;
+
 
 class BitField {
 private:
@@ -28,6 +39,5 @@ public:
     BitField operator~();
 
     ~BitField(){
-
     }
 };
