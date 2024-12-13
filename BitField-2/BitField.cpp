@@ -26,6 +26,20 @@ BitField::BitField(const BitField& tmp) {
         _mem[i] = tmp._mem[i];
 }
 
+BitField BitField::summ(BitField& tmp)  {
+    BitField result(max(tmp.GetLength(), _sizeBit ) + 1);
+
+    for (int i = 0; i < max(tmp.GetLength(), _sizeBit ); i++){
+        if(GetBit(i) ^ tmp.GetBit(i) ^ result.GetBit(i)) result.SetBit(i);
+        else{
+            if(GetBit(i) + tmp.GetBit(i) + result.GetBit(i) >= 2){
+                result.SetBit(i + 1);
+            }
+        }
+        }
+    return result;
+}
+
 BitField& BitField::operator=(const BitField& tmp) {
     if (_sizeBit != tmp._sizeBit) {
         _sizeBit = tmp._sizeBit;

@@ -13,6 +13,9 @@ public:
   Set(const BitField &bf); // конструктор преобразования типа
   operator BitField(); // преобразование типа к битовому полю
   // доступ к битам
+
+  uint16_t GetNum(size_t n, uint16_t mask);
+  
   size_t GetMaxPower(void) const;     // максимальная мощность множества
   void InsElem(const uint64_t Elem);       // включить элемент в множество
   void DelElem(const uint64_t Elem);       // удалить элемент из множества

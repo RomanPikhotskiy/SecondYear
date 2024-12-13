@@ -19,6 +19,10 @@ void Set::InsElem(uint64_t elem) {
     }
 }
 
+uint16_t Set::GetNum(size_t n, uint16_t mask){
+    return _bitField.GetCh(n, mask);
+}
+
 vector<uint64_t> Set::GetPrimary(){
     vector <uint64_t> res;
     unordered_set<int> used;
